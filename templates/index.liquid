@@ -28,7 +28,7 @@
       Example:
         - {% assign grid_item_width = 'large--one-third medium--one-half' %}
     {% endcomment %}
-    {% assign grid_item_width = 'large--one-quarter medium--one-half' %}
+    {% assign grid_item_width = 'large--one-sixth medium--one-half' %}
     {% include 'product-grid-item' %}
 
   {% else %}
@@ -64,7 +64,7 @@
   {% assign index = 1 %}
   {% assign isEmpty = true %}
 
-  {% for collection in collections limit:6 %}
+  {% for collection in collections limit:4 %}
     {% unless index > 5 %}
 
       {% unless collection.handle == 'frontpage' %}
