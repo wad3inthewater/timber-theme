@@ -29,6 +29,7 @@
 
   <!-- CSS ================================================== -->
   {{ 'timber.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'slider-pro.min.css' | asset_url | stylesheet_tag }}
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
@@ -377,6 +378,7 @@
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
+  {{ 'jquery.sliderPro.min.js' | asset_url | script_tag }}
 
   {% comment %}
     Template-specific js
@@ -421,6 +423,20 @@
       });
     </script>
   {% endif %}
+  <script type="text/javascript">
+  $( document ).ready(function( $ ) {
+    $( '#example2' ).sliderPro({
+      width: '100%',
+      height: 400,
+      aspectRatio: 2.5,
+      visibleSize: '100%',
+      forceSize: 'fullWidth',
+      arrows: true,
+      fade: false
+    });
+
+    });
+  </script>
 
 </body>
 </html>
